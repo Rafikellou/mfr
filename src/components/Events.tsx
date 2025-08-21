@@ -102,13 +102,14 @@ export default function Events() {
         </div>
         
         {/* Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-          <div className="flex gap-2">
+        <div className="flex flex-col items-center gap-4 mb-10 w-full">
+          {/* Pills: overflow horizontal sur mobile */}
+          <div className="flex gap-2 w-full max-w-2xl overflow-x-auto -mx-4 px-4 pb-1 sm:mx-0 sm:px-0 sm:overflow-visible justify-start sm:justify-center">
             {['all', 'detection', 'tournoi', 'stage'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2 rounded-full transition-colors ${
+                className={`whitespace-nowrap px-4 py-2 text-sm rounded-full transition-colors ${
                   activeFilter === filter
                     ? 'bg-primary text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100'
@@ -119,11 +120,12 @@ export default function Events() {
             ))}
           </div>
           
-          <div className="flex gap-4">
+          {/* Selects: pleine largeur sur mobile, côte à côte dès sm */}
+          <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg bg-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white"
             >
               <option value="">Catégorie</option>
               <option value="u13">U13</option>
@@ -135,7 +137,7 @@ export default function Events() {
             <select
               value={locationFilter}
               onChange={(e) => setLocationFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg bg-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white"
             >
               <option value="">Lieu</option>
               <option value="montpellier">Montpellier</option>
