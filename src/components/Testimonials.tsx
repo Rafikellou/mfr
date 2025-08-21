@@ -10,7 +10,7 @@ export default function Testimonials() {
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="mb-6">
               <p className="text-gray-700 italic">
-                "Ça faisait longtemps que je voulais montrer ce que je vaux. Maintenant à moi de prouver à Como."
+                &ldquo;Ça faisait longtemps que je voulais montrer ce que je vaux. Maintenant à moi de prouver à Como.&rdquo;
               </p>
             </div>
             <div>
@@ -22,7 +22,7 @@ export default function Testimonials() {
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="mb-6">
               <p className="text-gray-700 italic">
-                "Organisation pro, infos claires, et surtout un vrai regard sur le niveau des garçons. Notre fils a progressé et s'est situé."
+                &ldquo;Organisation pro, infos claires, et surtout un vrai regard sur le niveau des garçons. Notre fils a progressé et s&apos;est situé.&rdquo;
               </p>
             </div>
             <div>
@@ -34,7 +34,7 @@ export default function Testimonials() {
           <div className="bg-white p-8 rounded-2xl shadow-lg">
             <div className="mb-6">
               <p className="text-gray-700 italic">
-                "Le format MFR met les joueurs dans des situations proches du haut niveau. Idéal pour les évaluer rapidement."
+                &ldquo;Le format MFR met les joueurs dans des situations proches du haut niveau. Idéal pour les évaluer rapidement.&rdquo;
               </p>
             </div>
             <div>

@@ -19,20 +19,20 @@ export default function Header() {
               className="h-10 w-auto"
             />
             <span className="ml-3 text-sm md:text-base font-medium text-gray-700 whitespace-nowrap hidden sm:block">
-              Football de jeunes d'<span className="text-primary font-semibold">élite</span>
+              Football de jeunes d&apos;<span className="text-primary font-semibold">élite</span>
             </span>
           </div>
           
           <ul className="hidden md:flex items-center space-x-8">
             <li><a href="#evenements" className="text-gray-700 hover:text-primary transition-colors">Événements</a></li>
             <li><a href="#formats" className="text-gray-700 hover:text-primary transition-colors">Nos formats</a></li>
-            <li><a href="#comment-ca-marche" className="text-gray-700 hover:text-primary transition-colors">Comment s'inscrire</a></li>
+            <li><a href="#comment-ca-marche" className="text-gray-700 hover:text-primary transition-colors">Comment s&apos;inscrire</a></li>
             <li><a href="#clubs-partenaires" className="text-gray-700 hover:text-primary transition-colors">Partenaires</a></li>
             <li><a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a></li>
           </ul>
           
           <a href="#evenements" className="hidden md:block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors">
-            S'inscrire
+            S&apos;inscrire
           </a>
           
           <button 
@@ -52,12 +52,12 @@ export default function Header() {
             <ul className="space-y-4">
               <li><a href="#evenements" className="block text-gray-700 hover:text-primary">Événements</a></li>
               <li><a href="#formats" className="block text-gray-700 hover:text-primary">Nos formats</a></li>
-              <li><a href="#comment-ca-marche" className="block text-gray-700 hover:text-primary">Comment s'inscrire</a></li>
+              <li><a href="#comment-ca-marche" className="block text-gray-700 hover:text-primary">Comment s&apos;inscrire</a></li>
               <li><a href="#clubs-partenaires" className="block text-gray-700 hover:text-primary">Partenaires</a></li>
               <li><a href="#contact" className="block text-gray-700 hover:text-primary">Contact</a></li>
             </ul>
             <a href="#evenements" className="mt-4 w-full inline-block text-center bg-primary text-white px-6 py-2 rounded-full">
-              S'inscrire
+              S&apos;inscrire
             </a>
           </div>
         )}

@@ -84,7 +84,7 @@ export default function Newsletter() {
                 className="mt-1 w-4 h-4 text-white border-white rounded focus:ring-white"
               />
               <span className="text-sm">
-                J'accepte de recevoir les alertes dates par e-mail (RGPD)
+                J&apos;accepte de recevoir les alertes dates par e-mail (RGPD)
               </span>
             </label>
           </div>
@@ -100,7 +100,7 @@ export default function Newsletter() {
                 : 'bg-white text-primary hover:bg-gray-100'
             }`}
           >
-            {isSubmitted ? '✓ Inscrit !' : isSubmitting ? 'Inscription en cours...' : "S'abonner aux alertes"}
+            {isSubmitted ? '✓ Inscrit !' : isSubmitting ? 'Inscription en cours...' : "S&apos;abonner aux alertes"}
           </button>
         </form>
       </div>
