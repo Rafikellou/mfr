@@ -412,7 +412,7 @@ export default function PartenairesPage() {
             Rejoignez notre réseau de partenaires
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Vous partagez notre passion pour le football et l'excellence sportive ? 
+            Vous partagez notre passion pour le football et l&apos;excellence sportive ? 
             Découvrez comment devenir partenaire et accompagner les talents de demain.
           </p>
           <a 

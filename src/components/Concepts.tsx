@@ -48,7 +48,7 @@ export default function Concepts() {
       description: "Perfectionne ton jeu selon ton poste avec des pros. Que tu sois gardien, défenseur, milieu ou attaquant, découvre les secrets des meilleurs !",
       benefits: [
         "Entraînement spécialisé pour ton poste",
-        "Techniques de pro qu'on ne t'apprend nulle part",
+        "Techniques de pro qu&apos;on ne t&apos;apprend nulle part",
         "Progression adaptée à tes points forts",
         "Coaching perso avec des experts"
       ],

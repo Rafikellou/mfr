@@ -16,7 +16,7 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-gray-400">Football d'Elite</p>
+            <p className="text-gray-400">Football d&apos;Elite</p>
             <p className="text-gray-400 text-sm mt-2">Révélateur de talents depuis 2020</p>
           </div>
           

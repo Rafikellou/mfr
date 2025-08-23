@@ -105,9 +105,9 @@ export default function ContactPage() {
           </h1>
           
           <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-3xl mx-auto">
-            Une question ? Un projet ? Nous sommes là pour t'accompagner.
+            Une question ? Un projet ? Nous sommes là pour t&apos;accompagner.
             <br className="hidden md:block" />
-            Découvre comment nous pouvons t'aider à réaliser tes rêves sportifs.
+            Découvre comment nous pouvons t&apos;aider à réaliser tes rêves sportifs.
           </p>
         </div>
         

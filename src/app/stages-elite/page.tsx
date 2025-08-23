@@ -325,10 +325,10 @@ export default function StagesElitePage() {
                                 }`}
                                 disabled={stage.status === 'full'}
                               >
-                                {stage.status === 'full' ? 'Complet' : "S'inscrire maintenant"}
+                                {stage.status === 'full' ? 'Complet' : "S&apos;inscrire maintenant"}
                               </button>
                               <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
-                                Plus d'infos
+                                Plus d&apos;infos
                               </a>
                             </div>
                             <div className="text-center lg:text-right">
