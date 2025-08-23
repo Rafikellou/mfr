@@ -31,7 +31,7 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               3
             </div>
-            <h3 className="text-xl font-semibold mb-4">Payer et c'est parti !</h3>
+            <h3 className="text-xl font-semibold mb-4">Payer et c&apos;est parti !</h3>
             <p className="text-gray-600">
               Paiement partiel sécurisé pour réserver ta place. Confirmation immédiate.
             </p>

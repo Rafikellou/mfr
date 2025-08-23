@@ -69,10 +69,10 @@ export default function Concepts() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4">
-            Trois voies vers l'excellence
+            Trois voies vers l&apos;excellence
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Découvre les opportunités qui t'attendent pour révéler ton potentiel
+            Découvre les opportunités qui t&apos;attendent pour révéler ton potentiel
           </p>
         </div>
 

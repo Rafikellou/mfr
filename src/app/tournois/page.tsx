@@ -137,7 +137,7 @@ export default function TournoisPage() {
           </h1>
           
           <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-3xl mx-auto">
-            Démontre que ton équipe est l'une des meilleures de sa catégorie.
+            Démontre que ton équipe est l&apos;une des meilleures de sa catégorie.
             <br className="hidden md:block" />
             Affrontez les équipes les plus compétitives et forgez votre légende sur le terrain.
           </p>
@@ -260,7 +260,7 @@ export default function TournoisPage() {
                           {/* Age Category and Pricing */}
                           <div className="grid grid-cols-2 gap-4">
                             <div className="bg-gray-50 p-3 rounded-lg">
-                              <div className="text-sm text-gray-600 mb-1">Catégorie d'âge</div>
+                              <div className="text-sm text-gray-600 mb-1">Catégorie d&apos;âge</div>
                               <div className="font-semibold text-gray-800">{tournament.categoryLabel}</div>
                               <div className="text-xs text-gray-500">{tournament.ageRange}</div>
                             </div>

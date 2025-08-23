@@ -199,7 +199,7 @@ export default function PartenairesPage() {
               ⚽ Clubs Partenaires
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des clubs d'exception qui partagent notre vision de l'excellence sportive
+              Des clubs d&apos;exception qui partagent notre vision de l&apos;excellence sportive
             </p>
           </div>
           

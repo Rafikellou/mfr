@@ -255,7 +255,7 @@ export default function DetectionsPage() {
                         {/* Age Category and Pricing */}
                         <div className="grid grid-cols-2 gap-4">
                       <div className="bg-gray-50 p-3 rounded-lg">
-                        <div className="text-sm text-gray-600 mb-1">Catégorie d'âge</div>
+                        <div className="text-sm text-gray-600 mb-1">Catégorie d&apos;âge</div>
                         <div className="font-semibold text-gray-800">{detection.categoryLabel}</div>
                         <div className="text-xs text-gray-500">{detection.ageRange}</div>
                       </div>
