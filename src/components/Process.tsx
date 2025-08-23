@@ -6,14 +6,14 @@ export default function Process() {
           Processus d&apos;inscription simple
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
           <div className="text-center">
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               1
             </div>
             <h3 className="text-xl font-semibold mb-4">Choisir un événement</h3>
             <p className="text-gray-600">
-              Sélectionnez parmi nos détections, tournois ou stages selon votre catégorie et vos objectifs.
+              Sélectionne parmi nos détections, tournois ou stages selon ta catégorie.
             </p>
           </div>
           
@@ -23,7 +23,7 @@ export default function Process() {
             </div>
             <h3 className="text-xl font-semibold mb-4">Remplir le formulaire</h3>
             <p className="text-gray-600">
-              Licence, poste, niveau, contacts - toutes les infos nécessaires en quelques clics.
+              Tes infos principales en quelques clics seulement.
             </p>
           </div>
           
@@ -31,29 +31,19 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               3
             </div>
-            <h3 className="text-xl font-semibold mb-4">Payer et confirmer</h3>
+            <h3 className="text-xl font-semibold mb-4">Payer et c'est parti !</h3>
             <p className="text-gray-600">
-              Paiement sécurisé et confirmation instantanée par e-mail.
+              Paiement partiel sécurisé pour réserver ta place. Confirmation immédiate.
             </p>
           </div>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-8 mb-8">
-          <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-md">
-            <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5-6a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="font-medium">Paiement sécurisé (Stripe)</span>
-          </div>
-          <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-md">
-            <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span className="font-medium">Confirmation instantanée</span>
-          </div>
-        </div>
-        
         <div className="text-center">
+          <div className="mb-6">
+            <a href="#concepts" className="bg-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 inline-block">
+              Explorer les événements
+            </a>
+          </div>
           <a href="#faq" className="text-primary hover:text-primary/80 font-medium underline">
             FAQ inscriptions
           </a>

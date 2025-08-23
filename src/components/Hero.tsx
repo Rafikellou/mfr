@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -19,34 +20,31 @@ export default function Hero() {
       
       {/* Content (split top/bottom) */}
       <div className="relative z-10 text-white px-4 max-w-6xl mx-auto w-full min-h-[90vh] flex flex-col justify-between">
-        {/* Top group: title + badges */}
+        {/* Top group: title only */}
         <div className="pt-24 md:pt-32 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold mb-4 text-white drop-shadow-2xl tracking-tight">
             Révèle ton talent
           </h1>
-          {/* 2) Pills simplifiées (petites) */}
-          <div className="flex flex-wrap justify-center gap-3 mt-3">
-            <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm text-white text-sm font-medium">
-              Détections
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm text-white text-sm font-medium">
-              Tournois
-            </span>
-            <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/20 backdrop-blur-sm text-white text-sm font-medium">
-              Stages
-            </span>
-          </div>
         </div>
 
-        {/* Bottom group: CTA + partners */}
+        {/* Bottom group: CTA badges + partners */}
         <div className="pb-12 md:pb-16 text-center">
-          {/* 3) CTA principal (plus petit) */}
-          <div className="flex justify-center mb-6 md:mb-8">
-            <button className="bg-primary text-white px-6 py-3 rounded-full text-base font-medium hover:bg-primary/90 transition-colors shadow-lg">
-              Voir les événements à venir
-            </button>
+          {/* Event type CTAs - Discreet text links */}
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 mb-8 md:mb-10 px-4">
+            <Link href="/detections" className="group text-white/90 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 py-2 px-4 rounded-lg hover:bg-white/10 backdrop-blur-sm">
+              <span className="text-lg">🔍</span>
+              <span className="text-lg font-medium border-b border-transparent group-hover:border-white/50 transition-all duration-300">Détections</span>
+            </Link>
+            <Link href="/tournois" className="group text-white/90 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 py-2 px-4 rounded-lg hover:bg-white/10 backdrop-blur-sm">
+              <span className="text-lg">🏆</span>
+              <span className="text-lg font-medium border-b border-transparent group-hover:border-white/50 transition-all duration-300">Tournois</span>
+            </Link>
+            <Link href="/stages-elite" className="group text-white/90 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 py-2 px-4 rounded-lg hover:bg-white/10 backdrop-blur-sm">
+              <span className="text-lg">📈</span>
+              <span className="text-lg font-medium border-b border-transparent group-hover:border-white/50 transition-all duration-300">Stages Elite</span>
+            </Link>
           </div>
-          {/* 4) Partenaires */}
+          {/* Partners section */}
           <div>
             <div className="text-xs text-white/80 mb-4 font-light">En partenariat avec</div>
             <div className="overflow-hidden max-w-4xl mx-auto">
