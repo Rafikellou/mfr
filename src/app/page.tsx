@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import ClasicoCup from '@/components/ClasicoCup'
 import Concepts from '@/components/Concepts'
 import Process from '@/components/Process'
 import Partners from '@/components/Partners'
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <ClasicoCup />
       <Concepts />
       <Process />
       <Partners />
