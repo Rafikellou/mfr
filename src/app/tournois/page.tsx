@@ -32,44 +32,6 @@ const tournamentsData = [
       { name: 'Montpellier Football Academy', city: 'Montpellier' },
       { name: 'Montpellier FC Petit Bar', city: 'Montpellier' }
     ]
-  },
-  {
-    id: 4,
-    type: 'tournoi',
-    title: 'Tournoi Portugal vs France',
-    date: '2026-06-30',
-    dateFormatted: 'Dimanche 30 Juin 2026',
-    time: '8h00 - 19h00',
-    city: 'Montpellier',
-    venue: 'Stade de la Mosson',
-    venueAddress: 'Avenue de Heidelberg, 34000 Montpellier',
-    googleMapsLink: 'https://maps.google.com/?q=Stade+de+la+Mosson+Montpellier',
-    category: 'u11',
-    categoryLabel: 'U11',
-    ageRange: '10-11 ans',
-    teamsTotal: 20,
-    teamsLeft: 8,
-    price: '70€',
-    priceType: 'par équipe',
-    advancePayment: '5€',
-    image: '/tournoi-photo.jpg',
-    status: 'open',
-    description: 'Tournoi international prestigieux entre équipes françaises et portugaises pour une expérience unique. Développe ton esprit de compétition face aux meilleures équipes européennes.',
-    format: 'Phase de poules + Phase finale - Matchs 9vs9',
-    registeredTeams: [
-      { name: 'FC Porto Jeunes', city: 'Porto (PT)' },
-      { name: 'Sporting CP U11', city: 'Lisbonne (PT)' },
-      { name: 'FC Montpellier Elite', city: 'Montpellier' },
-      { name: 'OL Académie', city: 'Lyon' },
-      { name: 'OM Formation', city: 'Marseille' },
-      { name: 'FC Benfica Youth', city: 'Lisbonne (PT)' },
-      { name: 'PSG Academy', city: 'Paris' },
-      { name: 'AS Monaco U11', city: 'Monaco' },
-      { name: 'FC Braga Jeunes', city: 'Braga (PT)' },
-      { name: 'LOSC Formation', city: 'Lille' },
-      { name: 'FC Nantes U11', city: 'Nantes' },
-      { name: 'Vitoria SC Youth', city: 'Guimarães (PT)' }
-    ]
   }
 ]
 

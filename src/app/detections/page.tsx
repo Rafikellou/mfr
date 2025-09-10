@@ -25,7 +25,7 @@ const detectionsData = [
     priceType: 'par joueur',
     advancePayment: '5€',
     image: '/detection-benfica.jpg',
-    status: 'open',
+    status: 'closed',
     club: 'SL Benfica',
     description: 'Une opportunité unique de montrer tes talents devant les recruteurs du SL Benfica. Les détecteurs évalueront ton niveau technique, tactique et mental.',
     format: 'Matchs 7vs7 + Tests techniques individuels',
@@ -46,38 +46,6 @@ const detectionsData = [
       { firstName: 'Julien', lastName: 'N.' },
       { firstName: 'Nicolas', lastName: 'S.' }
     ]
-  },
-  {
-    id: 6,
-    type: 'detection',
-    title: 'Détection Olympique de Marseille',
-    date: '2025-09-10',
-    dateFormatted: 'Mercredi 10 Septembre 2025',
-    time: '13h30 - 16h30',
-    city: 'Marseille',
-    venue: 'Centre Robert Louis-Dreyfus',
-    venueAddress: 'Chemin du Viaduc, 13009 Marseille',
-    googleMapsLink: 'https://maps.google.com/?q=Centre+Robert+Louis-Dreyfus+Marseille',
-    category: 'u15',
-    categoryLabel: 'U15',
-    ageRange: '15 ans',
-    placesTotal: 25,
-    placesLeft: 20,
-    price: '45€',
-    priceType: 'par joueur',
-    advancePayment: '5€',
-    image: '/detection-marseille.jpg',
-    status: 'open',
-    club: 'Olympique de Marseille',
-    description: 'Présente-toi devant les recruteurs de l\'OM et montre ton potentiel dans un environnement professionnel.',
-    format: 'Séances d\'entraînement + Matchs à thème',
-    registeredPlayers: [
-      { firstName: 'Yanis', lastName: 'A.' },
-      { firstName: 'Karim', lastName: 'B.' },
-      { firstName: 'Mehdi', lastName: 'K.' },
-      { firstName: 'Sofiane', lastName: 'M.' },
-      { firstName: 'Ryan', lastName: 'L.' }
-    ]
   }
 ]
 
@@ -89,6 +57,8 @@ export default function DetectionsPage() {
       return <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm">Complet</div>
     } else if (detection.status === 'last-places') {
       return <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm">Dernières places</div>
+    } else if (detection.status === 'closed') {
+      return <div className="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-sm">Détection finalisée</div>
     }
     return null
   }
@@ -170,7 +140,7 @@ export default function DetectionsPage() {
                     </div>
                   )}
                   
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                  <div className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow ${detection.status === 'closed' ? 'opacity-70' : ''}`}>
                     {/* Large Event Image */}
                     <div className="relative h-80">
                     <Image
@@ -312,18 +282,18 @@ export default function DetectionsPage() {
                     </div>
                     
                     <div className="px-8 pb-8 mt-8">
-                      <div className="bg-gray-50 p-6 rounded-xl">
+                      <div className={`p-6 rounded-xl ${detection.status === 'closed' ? 'bg-gray-200' : 'bg-gray-50'}`}>
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
                             <button 
                               className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
-                                detection.status === 'full' 
+                                detection.status === 'full' || detection.status === 'closed'
                                   ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
                                   : 'bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105'
                               }`}
-                              disabled={detection.status === 'full'}
+                              disabled={detection.status === 'full' || detection.status === 'closed'}
                             >
-                              {detection.status === 'full' ? 'Complet' : "S&apos;inscrire maintenant"}
+                              {detection.status === 'full' ? 'Complet' : detection.status === 'closed' ? 'Détection finalisée' : "S&apos;inscrire maintenant"}
                             </button>
                             <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
                               Plus d&apos;infos
@@ -340,6 +310,16 @@ export default function DetectionsPage() {
                 </div>
                 </div>
               ))}
+              {/* Message for upcoming detections */}
+              <div className="text-center py-12">
+                <p className="text-gray-700 text-lg mb-4">Prochaines détections seront bientôt disponibles.</p>
+                <a href="/contact" className="text-primary hover:text-primary/80 text-lg font-medium inline-flex items-center gap-1">
+                  Contacte-nous pour plus de détails
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
           ) : (
             <div className="text-center py-12">
