@@ -8,11 +8,11 @@ export default function RoleDesParents() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Header />
-      <div className="pt-20 py-12"> {/* Increased pt-20 to account for fixed header height */}
+      <div className="pt-20 py-12">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Le rôle des parents au bord du terrain
+              Le r&ocirc;le des parents au bord du terrain
             </h1>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -28,7 +28,7 @@ export default function RoleDesParents() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="text-white text-xl font-medium">
-                  Votre soutien est essentiel pour le développement de votre enfant
+                  Votre soutien est essentiel pour le d&eacute;veloppement de votre enfant
                 </p>
               </div>
             </div>
@@ -36,11 +36,11 @@ export default function RoleDesParents() {
             <div className="p-6 md:p-8">
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Au sein de notre club, nous savons combien le soutien des parents est précieux. Vous êtes les premiers éducateurs de vos enfants et votre attitude joue un rôle essentiel dans leur plaisir, leur motivation et leur progression.
+                  Au sein de notre club, nous savons combien le soutien des parents est pr&eacute;cieux. Vous &ecirc;tes les premiers &eacute;ducateurs de vos enfants et votre attitude joue un r&ocirc;le essentiel dans leur plaisir, leur motivation et leur progression.
                 </p>
 
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  Le football, surtout en catégorie de jeunes, n'est pas seulement une compétition : c'est un espace d'apprentissage, de partage et de développement personnel. Chaque entraînement, chaque match est une occasion d'apprendre, de progresser, de se faire des amis et de grandir, sur le terrain comme en dehors.
+                  Le football, surtout en cat&eacute;gorie de jeunes, n&apos;est pas seulement une comp&eacute;tition : c&apos;est un espace d&apos;apprentissage, de partage et de d&eacute;veloppement personnel. Chaque entra&icirc;nement, chaque match est une occasion d&apos;apprendre, de progresser, de se faire des amis et de grandir, sur le terrain comme en dehors.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
@@ -57,19 +57,19 @@ export default function RoleDesParents() {
                     <ul className="space-y-3 mt-4">
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Encourager avec bienveillance :</strong> applaudissez les efforts, la persévérance et le fair-play, pas uniquement les buts ou les victoires.</span>
+                        <span><strong>Encourager avec bienveillance :</strong> applaudissez les efforts, la pers&eacute;v&eacute;rance et le fair-play, pas uniquement les buts ou les victoires.</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Respecter les éducateurs et arbitres :</strong> leur rôle est d'accompagner, d'encadrer et de faire progresser les enfants.</span>
+                        <span><strong>Respecter les &eacute;ducateurs et arbitres :</strong> leur r&ocirc;le est d&apos;accompagner, d&apos;encadrer et de faire progresser les enfants.</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Favoriser l'esprit d'équipe :</strong> rappelez à votre enfant que le football est un sport collectif.</span>
+                        <span><strong>Favoriser l&apos;esprit d&apos;&eacute;quipe :</strong> rappelez &agrave; votre enfant que le football est un sport collectif.</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Valoriser le plaisir avant le résultat :</strong> l'important est d'aimer jouer et progresser.</span>
+                        <span><strong>Valoriser le plaisir avant le r&eacute;sultat :</strong> l&apos;important est d&apos;aimer jouer et progresser.</span>
                       </li>
                     </ul>
                   </div>
@@ -81,21 +81,21 @@ export default function RoleDesParents() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <h2 className="text-xl font-bold text-amber-700">Ce qu'il faut éviter</h2>
+                      <h2 className="text-xl font-bold text-amber-700">Ce qu&apos;il faut &eacute;viter</h2>
                     </div>
                     
                     <ul className="space-y-3 mt-4">
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Donner des consignes depuis le bord du terrain :</strong> cela peut perturber l'enfant.</span>
+                        <span><strong>Donner des consignes depuis le bord du terrain :</strong> cela peut perturber l&apos;enfant.</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Mettre trop de pression sur la performance :</strong> un enfant qui joue dans la peur de décevoir perd confiance.</span>
+                        <span><strong>Mettre trop de pression sur la performance :</strong> un enfant qui joue dans la peur de d&eacute;cevoir perd confiance.</span>
                       </li>
                       <li className="flex items-start">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span><strong>Critiquer arbitres, adversaires ou partenaires :</strong> l'enfant imite souvent les comportements qu'il observe.</span>
+                        <span><strong>Critiquer arbitres, adversaires ou partenaires :</strong> l&apos;enfant imite souvent les comportements qu&apos;il observe.</span>
                       </li>
                     </ul>
                   </div>
@@ -108,21 +108,21 @@ export default function RoleDesParents() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h2 className="text-xl font-bold text-blue-700">L'essentiel à retenir</h2>
+                    <h2 className="text-xl font-bold text-blue-700">L&apos;essentiel &agrave; retenir</h2>
                   </div>
                   
                   <p className="text-gray-700 mb-4">
-                    Un enfant qui joue au football doit avant tout s'amuser, apprendre et progresser. Les victoires sont un bonus, mais la formation et le développement personnel passent avant tout.
+                    Un enfant qui joue au football doit avant tout s&apos;amuser, apprendre et progresser. Les victoires sont un bonus, mais la formation et le d&eacute;veloppement personnel passent avant tout.
                   </p>
                   
                   <p className="text-gray-700">
-                    En accompagnant votre enfant avec bienveillance, en valorisant ses efforts plutôt que ses résultats, vous l'aidez à construire non seulement ses compétences sportives, mais aussi des valeurs fortes : respect, esprit d'équipe, persévérance et confiance en soi.
+                    En accompagnant votre enfant avec bienveillance, en valorisant ses efforts plut&ocirc;t que ses r&eacute;sultats, vous l&apos;aidez &agrave; construire non seulement ses comp&eacute;tences sportives, mais aussi des valeurs fortes : respect, esprit d&apos;&eacute;quipe, pers&eacute;v&eacute;rance et confiance en soi.
                   </p>
                 </div>
 
                 <div className="text-center mt-10 pt-6 border-t border-gray-200">
                   <p className="text-xl font-semibold text-primary">
-                    Merci de contribuer, avec nous, à faire du football un terrain d'éducation et de plaisir pour tous ! ⚽
+                    Merci de contribuer, avec nous, &agrave; faire du football un terrain d&apos;&eacute;ducation et de plaisir pour tous ! ⚽
                   </p>
                 </div>
               </div>

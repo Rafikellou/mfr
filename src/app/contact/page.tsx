@@ -30,8 +30,8 @@ export default function Contact() {
               </h2>
               
               <p className="text-gray-600 mb-8">
-                Notre équipe est à votre disposition pour répondre à toutes vos questions. 
-                N'hésitez pas à nous contacter par email.
+                Notre &eacute;quipe est &agrave; votre disposition pour r&eacute;pondre &agrave; toutes vos questions. 
+                N&apos;h&eacute;sitez pas &agrave; nous contacter par email.
               </p>
               
               <div className="bg-purple-50 rounded-xl p-6 border border-purple-100 mb-8">
@@ -51,8 +51,8 @@ export default function Contact() {
               </div>
               
               <div className="text-gray-500 text-sm">
-                <p className="mb-2">Nous vous répondrons dans les plus brefs délais.</p>
-                <p>Horaires d'ouverture : Lundi - Vendredi, 9h - 18h</p>
+                <p className="mb-2">Nous vous r&eacute;pondrons dans les plus brefs d&eacute;lais.</p>
+                <p>Horaires d&apos;ouverture : Lundi - Vendredi, 9h - 18h</p>
               </div>
             </div>
           </div>

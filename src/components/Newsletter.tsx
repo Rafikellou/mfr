@@ -51,7 +51,7 @@ export default function Newsletter() {
                   : 'bg-white text-primary hover:bg-gray-100'
               }`}
             >
-              {isSubmitted ? '✓ Inscrit !' : isSubmitting ? 'En cours...' : "S'abonner"}
+              {isSubmitted ? '✓ Inscrit !' : isSubmitting ? 'En cours...' : "S&apos;abonner"}
             </button>
           </div>
         </form>
