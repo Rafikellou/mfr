@@ -44,22 +44,92 @@ export default function Hero() {
               <span className="text-lg font-medium border-b border-transparent group-hover:border-white/50 transition-all duration-300">Stages Elite</span>
             </Link>
           </div>
-          {/* Partners section */}
+          {/* Football icons section */}
           <div>
-            <div className="text-xs text-white/80 mb-4 font-light">En partenariat avec</div>
+            <div className="text-xs text-white/80 mb-4 font-light">Entraîne-toi comme les pros</div>
             <div className="overflow-hidden max-w-4xl mx-auto">
-              <div className="flex items-center gap-12 animate-scroll">
-                <Image src="/Benfica-Logo.png" alt="SL Benfica" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/como-logo.svg" alt="FC Como" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/marseille-logo.png" alt="Olympique de Marseille" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/lyon-logo.svg" alt="Olympique Lyonnais" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/montpellier-logo.png" alt="Montpellier Hérault SC" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
+              <div className="flex items-center justify-center gap-12 animate-scroll">
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Compétition</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Progression</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Détection</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Excellence</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Talent</span>
+                </div>
                 {/* Duplicate for infinite scroll */}
-                <Image src="/Benfica-Logo.png" alt="SL Benfica" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/como-logo.svg" alt="FC Como" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/marseille-logo.png" alt="Olympique de Marseille" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/lyon-logo.svg" alt="Olympique Lyonnais" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
-                <Image src="/montpellier-logo.png" alt="Montpellier Hérault SC" width={64} height={64} className="h-8 md:h-10 w-auto object-contain opacity-90" />
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Compétition</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Progression</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Détection</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Excellence</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-2">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-white/80">Talent</span>
+                </div>
               </div>
             </div>
           </div>

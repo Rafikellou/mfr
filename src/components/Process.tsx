@@ -11,9 +11,9 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               1
             </div>
-            <h3 className="text-xl font-semibold mb-4">Choisir un événement</h3>
+            <h3 className="text-xl font-semibold mb-4">Pré-inscription</h3>
             <p className="text-gray-600">
-              Sélectionne parmi nos détections, tournois ou stages selon ta catégorie.
+              Remplis le formulaire avec tes informations personnelles en quelques clics seulement.
             </p>
           </div>
           
@@ -21,9 +21,9 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               2
             </div>
-            <h3 className="text-xl font-semibold mb-4">Remplir le formulaire</h3>
+            <h3 className="text-xl font-semibold mb-4">Confirmation</h3>
             <p className="text-gray-600">
-              Tes infos principales en quelques clics seulement.
+              Notre équipe te contacte rapidement pour finaliser les détails de ton inscription.
             </p>
           </div>
           
@@ -31,17 +31,17 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               3
             </div>
-            <h3 className="text-xl font-semibold mb-4">Payer et c&apos;est parti !</h3>
+            <h3 className="text-xl font-semibold mb-4">Paiement sécurisé</h3>
             <p className="text-gray-600">
-              Paiement partiel sécurisé pour réserver ta place. Confirmation immédiate.
+              Paiement sécurisé en ligne pour garantir ta place. Tu recevras immédiatement ta confirmation.
             </p>
           </div>
         </div>
         
         <div className="text-center">
           <div className="mb-6">
-            <a href="#concepts" className="bg-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 inline-block">
-              Explorer les événements
+            <a href="/contact" className="bg-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 inline-block">
+              En savoir plus
             </a>
           </div>
           <a href="#faq" className="text-primary hover:text-primary/80 font-medium underline">
