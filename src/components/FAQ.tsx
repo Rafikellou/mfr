@@ -8,23 +8,23 @@ export default function FAQ() {
   const faqs = [
     {
       question: "À qui s'adressent vos événements ?",
-      answer: "Nos &eacute;v&eacute;nements s&apos;adressent aux joueurs &eacute;voluant en club, avec un niveau minimum d&eacute;partemental/r&eacute;gional selon les cat&eacute;gories."
+      answer: "Nos événements s'adressent aux joueurs évoluant en club, avec un niveau minimum départemental/régional selon les catégories."
     },
     {
       question: "Quel matériel faut-il prévoir ?",
-      answer: "Tenue de sport compl&egrave;te, chaussures adapt&eacute;es au terrain, gourde d&apos;eau. Le mat&eacute;riel technique est fourni."
+      answer: "Tenue de sport complète, chaussures adaptées au terrain, gourde d'eau. Le matériel technique est fourni."
     },
     {
       question: "Un certificat médical est-il obligatoire ?",
-      answer: "Oui, certificat m&eacute;dical de non contre-indication au sport datant de moins d&apos;un an obligatoire."
+      answer: "Oui, certificat médical de non contre-indication au sport datant de moins d'un an obligatoire."
     },
     {
-      question: "Droits &agrave; l&apos;image ?",
-      answer: "En participant &agrave; nos &eacute;v&eacute;nements, vous acceptez que des images puissent &ecirc;tre prises et utilis&eacute;es &agrave; des fins de communication. Ces images peuvent &ecirc;tre diffus&eacute;es sur nos r&eacute;seaux sociaux, site internet et supports de communication, sans compensation financi&egrave;re."
+      question: "Droits à l'image ?",
+      answer: "En participant à nos événements, vous acceptez que des images puissent être prises et utilisées à des fins de communication. Ces images peuvent être diffusées sur nos réseaux sociaux, site internet et supports de communication, sans compensation financière."
     },
     {
       question: "Politique d'annulation ?",
-      answer: "Les annulations sont possibles jusqu&apos;&agrave; 15 jours avant l&apos;&eacute;v&eacute;nement, sous r&eacute;serve d&apos;approbation. Pass&eacute; ce d&eacute;lai, le paiement est d&ucirc; en totalit&eacute; sauf en cas de blessure avec certificat m&eacute;dical. Les remboursements sont effectu&eacute;s sous 30 jours."
+      answer: "Les annulations sont possibles jusqu'à 15 jours avant l'événement, sous réserve d'approbation. Passé ce délai, le paiement est dû en totalité sauf en cas de blessure avec certificat médical. Les remboursements sont effectués sous 30 jours."
     }
   ]
 
@@ -32,7 +32,7 @@ export default function FAQ() {
     <section className="py-20 bg-white" id="faq">
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-center mb-16">
-          Questions fr&eacute;quentes
+          Questions fréquentes
         </h2>
         
         <div className="space-y-4">
