@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 export default function Concepts() {
@@ -5,12 +7,12 @@ export default function Concepts() {
     {
       title: "Tournois",
       subtitle: "Prouve ta valeur",
-      description: "Avec ton &eacute;quipe, affrontez les meilleures formations de votre cat&eacute;gorie. C&apos;est l&apos;occasion de montrer que vous &ecirc;tes les plus forts ensemble !",
+      description: "Avec ton équipe, affrontez les meilleures formations de votre catégorie. C'est l'occasion de montrer que vous êtes les plus forts ensemble !",
       benefits: [
-        "Du foot de haut niveau entre &eacute;quipes",
-        "Renforcer les liens avec tes co&eacute;quipiers",
-        "Te faire conna&icirc;tre dans ta r&eacute;gion",
-        "Apprendre &agrave; jouer sous pression"
+        "Du foot de haut niveau entre équipes",
+        "Renforcer les liens avec tes coéquipiers",
+        "Te faire connaître dans ta région",
+        "Apprendre à jouer sous pression"
       ],
       color: "primary",
       gradient: "from-primary to-purple-600",
@@ -24,34 +26,13 @@ export default function Concepts() {
       image: "/tournois-image.jpg"
     },
     {
-      title: "Stages",
-      subtitle: "D&eacute;veloppe ton potentiel",
-      description: "Perfectionne ton jeu selon ton poste avec des pros. Que tu sois gardien, d&eacute;fenseur, milieu ou attaquant, d&eacute;couvre les secrets des meilleurs !",
-      benefits: [
-        "Entra&icirc;nement sp&eacute;cialis&eacute; pour ton poste",
-        "Techniques de pro qu&apos;on ne t&apos;apprend nulle part",
-        "Progression adapt&eacute;e &agrave; tes points forts",
-        "Coaching perso avec des experts"
-      ],
-      color: "primary",
-      gradient: "from-primary to-purple-600",
-      bgColor: "bg-purple-50",
-      link: "/stages-elite",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
-      image: "/stages-image.jpg"
-    },
-    {
-      title: "D&eacute;tection",
+      title: "Détection",
       subtitle: "Ta chance de briller",
-      description: "Montre ce que tu sais faire devant des recruteurs de clubs pros. C&apos;est ton moment pour impressionner et peut-&ecirc;tre d&eacute;crocher ta place dans un grand club !",
+      description: "Montre ce que tu sais faire devant des recruteurs de clubs pros. C'est ton moment pour impressionner et peut-être décrocher ta place dans un grand club !",
       benefits: [
         "Des recruteurs pros qui te regardent jouer",
-        "Des conseils d&apos;entra&icirc;neurs exp&eacute;riment&eacute;s", 
-        "La possibilit&eacute; de rejoindre un club prestigieux",
+        "Des conseils d'entraîneurs expérimentés", 
+        "La possibilité de rejoindre un club prestigieux",
         "Un retour constructif sur ton niveau"
       ],
       color: "primary",
@@ -66,14 +47,14 @@ export default function Concepts() {
       image: "/detection-image.jpg"
     },
     {
-      title: "Coaching d&apos;&eacute;lite",
-      subtitle: "Atteins l&apos;excellence",
-      description: "B&eacute;n&eacute;ficie d&apos;un accompagnement personnalis&eacute; pour progresser &agrave; un niveau &eacute;lev&eacute;. Un coaching sur mesure pour atteindre tes objectifs les plus ambitieux.",
+      title: "Coaching d'élite",
+      subtitle: "Atteins l'excellence",
+      description: "Bénéficie d'un accompagnement personnalisé pour progresser à un niveau élevé. Un coaching sur mesure pour atteindre tes objectifs les plus ambitieux.",
       benefits: [
         "Analyse approfondie de ton jeu",
-        "Plan de d&eacute;veloppement personnalis&eacute;",
-        "Suivi r&eacute;gulier de ta progression",
-        "Acc&egrave;s &agrave; des m&eacute;thodes d&apos;entra&icirc;nement avanc&eacute;es"
+        "Plan de développement personnalisé",
+        "Suivi régulier de ta progression",
+        "Accès à des méthodes d'entraînement avancées"
       ],
       color: "primary",
       gradient: "from-primary to-purple-600",
@@ -85,6 +66,27 @@ export default function Concepts() {
         </svg>
       ),
       image: "/coaching-image.jpg"
+    },
+    {
+      title: "Stages",
+      subtitle: "Développe ton potentiel",
+      description: "Perfectionne ton jeu selon ton poste avec des pros. Que tu sois gardien, défenseur, milieu ou attaquant, découvre les secrets des meilleurs !",
+      benefits: [
+        "Entraînement spécialisé pour ton poste",
+        "Techniques de pro qu'on ne t'apprend nulle part",
+        "Progression adaptée à tes points forts",
+        "Coaching perso avec des experts"
+      ],
+      color: "primary",
+      gradient: "from-primary to-purple-600",
+      bgColor: "bg-purple-50",
+      link: "/stages-elite",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
+      image: "/stages-image.jpg"
     }
   ]
 
@@ -93,10 +95,10 @@ export default function Concepts() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4">
-            Quatre voies vers l&apos;excellence
+            Quatre voies vers l'excellence
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            D&eacute;couvre les opportunit&eacute;s qui t&apos;attendent pour r&eacute;v&eacute;ler ton potentiel
+            Découvre les opportunités qui t'attendent pour révéler ton potentiel
           </p>
         </div>
 
@@ -117,7 +119,7 @@ export default function Concepts() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3">B&eacute;n&eacute;fices pour toi :</h4>
+                    <h4 className="font-semibold text-gray-800 mb-3">Bénéfices pour toi :</h4>
                     <ul className="space-y-2">
                       {concept.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
@@ -133,7 +135,7 @@ export default function Concepts() {
                       href={concept.link}
                       className={`w-full block text-center py-3 rounded-lg font-medium transition-colors bg-gradient-to-r ${concept.gradient} text-white hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
                     >
-                      D&eacute;couvrir les {concept.title.toLowerCase()}
+                      Découvrir les {concept.title.toLowerCase()}
                     </Link>
                   </div>
                 </div>
@@ -144,7 +146,7 @@ export default function Concepts() {
 
         <div className="text-center mt-12">
           <p className="text-gray-500 text-sm">
-            Chaque format est con&ccedil;u pour d&eacute;velopper des aspects sp&eacute;cifiques de ton jeu et de ta carri&egrave;re
+            Chaque format est conçu pour développer des aspects spécifiques de ton jeu et de ta carrière
           </p>
         </div>
       </div>

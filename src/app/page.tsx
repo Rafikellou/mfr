@@ -20,7 +20,7 @@ export default function Home() {
           <div className="w-full border-t border-gray-300"></div>
         </div>
         <div className="relative flex justify-center">
-          <span className="bg-white px-4 text-sm text-gray-500 font-medium">OU</span>
+          <span className="bg-white px-4 text-sm text-gray-500 font-medium"></span>
         </div>
       </div>
       <PerfectionnementStage />
