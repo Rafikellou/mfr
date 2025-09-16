@@ -199,7 +199,7 @@ export default function PartenairesPage() {
               ⚽ Clubs Partenaires
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des clubs d&apos;exception qui partagent notre vision de l&apos;excellence sportive
+              Des clubs d'exception qui partagent notre vision de l'excellence sportive
             </p>
           </div>
           
@@ -412,7 +412,7 @@ export default function PartenairesPage() {
             Rejoignez notre réseau de partenaires
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Vous partagez notre passion pour le football et l&apos;excellence sportive ? 
+            Vous partagez notre passion pour le football et l'excellence sportive ? 
             Découvrez comment devenir partenaire et accompagner les talents de demain.
           </p>
           <a 

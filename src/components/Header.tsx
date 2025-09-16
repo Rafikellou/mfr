@@ -20,7 +20,7 @@ export default function Header() {
               className="h-10 w-auto"
             />
             <span className="ml-3 text-xs md:text-base font-medium text-gray-700 whitespace-nowrap">
-              Football d&apos;<span className="text-primary font-semibold">Elite</span>
+              Football d'<span className="text-primary font-semibold">Elite</span>
             </span>
           </Link>
           

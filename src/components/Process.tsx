@@ -3,7 +3,7 @@ export default function Process() {
     <section className="py-20 bg-gray-50" id="comment-ca-marche">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-center mb-16">
-          Processus d&apos;inscription simple
+          Processus d'inscription simple
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
@@ -11,7 +11,7 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               1
             </div>
-            <h3 className="text-xl font-semibold mb-4">Pr&eacute;-inscription</h3>
+            <h3 className="text-xl font-semibold mb-4">Pré-inscription</h3>
             <p className="text-gray-600">
               Remplis le formulaire avec tes informations personnelles en quelques clics seulement.
             </p>
@@ -31,7 +31,7 @@ export default function Process() {
             <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
               3
             </div>
-            <h3 className="text-xl font-semibold mb-4">Paiement s&eacute;curis&eacute;</h3>
+            <h3 className="text-xl font-semibold mb-4">Paiement sécurisé</h3>
             <p className="text-gray-600">
               Paiement sécurisé en ligne pour garantir ta place. Tu recevras immédiatement ta confirmation.
             </p>

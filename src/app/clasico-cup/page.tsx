@@ -23,9 +23,9 @@ export default function ClasicoCupPage() {
               frameBorder="0" 
               marginHeight={0} 
               marginWidth={0}
-              title="Formulaire d&apos;inscription Clasico Cup"
+              title="Formulaire d'inscription Clasico Cup"
             >
-              Chargement&hellip;
+              Chargement…
             </iframe>
           </div>
         </div>

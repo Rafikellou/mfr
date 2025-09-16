@@ -82,14 +82,14 @@ export default function TournoisPage() {
         
         <div className="relative container mx-auto px-4 text-center text-white z-10">
           <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 leading-tight">
-            Prouve ta{' '}
+            Prouve ta 
             <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
               valeur
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl opacity-90 leading-relaxed max-w-3xl mx-auto">
-            Démontre que ton équipe est l&apos;une des meilleures de sa catégorie.
+            Démontre que ton équipe est l'une des meilleures de sa catégorie.
             <br className="hidden md:block" />
             Affrontez les équipes les plus compétitives et forgez votre légende sur le terrain.
           </p>
@@ -138,7 +138,7 @@ export default function TournoisPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                       <div className="absolute top-6 left-6 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                        🏆 Tournoi
+                        Tournoi
                       </div>
                       {getStatusBadge(tournament)}
                       <div className="absolute bottom-6 left-6 text-white">
@@ -212,7 +212,7 @@ export default function TournoisPage() {
                           {/* Age Category and Pricing */}
                           <div className="grid grid-cols-2 gap-4">
                             <div className="bg-gray-50 p-3 rounded-lg">
-                              <div className="text-sm text-gray-600 mb-1">Catégorie d&apos;âge</div>
+                              <div className="text-sm text-gray-600 mb-1">Catégorie d'âge</div>
                               <div className="font-semibold text-gray-800">{tournament.categoryLabel}</div>
                               <div className="text-xs text-gray-500">{tournament.ageRange}</div>
                             </div>
@@ -281,10 +281,10 @@ export default function TournoisPage() {
                                 }`}
                                 disabled={tournament.status === 'full'}
                               >
-                                {tournament.status === 'full' ? 'Complet' : "Inscrire l&apos;équipe"}
+                                {tournament.status === 'full' ? 'Complet' : "Inscrire l'équipe"}
                               </button>
                               <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
-                                Plus d&apos;infos
+                                Plus d'infos
                               </a>
                             </div>
                             <div className="text-center lg:text-right">

@@ -167,7 +167,7 @@ export default function Events() {
           }`}
           disabled={event.status === 'full'}
         >
-          {event.status === 'full' ? 'Complet' : "S&apos;inscrire"}
+          {event.status === 'full' ? 'Complet' : "S'inscrire"}
         </button>
       </div>
     </div>

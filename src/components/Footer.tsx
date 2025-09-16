@@ -16,8 +16,8 @@ export default function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-gray-400">Football d&apos;&eacute;lite</p>
-            <p className="text-gray-400 text-sm mt-2">R&eacute;v&eacute;lateur de talents depuis 2020</p>
+            <p className="text-gray-400">Football d'Elite</p>
+            <p className="text-gray-400 text-sm mt-2">Révélateur de talents depuis 2020</p>
             
             {/* Social media icons */}
             <div className="flex space-x-4 mt-4">
@@ -37,7 +37,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Événements</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="/detections" className="hover:text-white transition-colors">🔍 D&eacute;tections</Link></li>
+              <li><Link href="/detections" className="hover:text-white transition-colors">🔍 Détections</Link></li>
               <li><Link href="/tournois" className="hover:text-white transition-colors">🏆 Tournois</Link></li>
               <li><Link href="/stages-elite" className="hover:text-white transition-colors">📈 Stages Elite</Link></li>
             </ul>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
               <li><Link href="/partenaires" className="hover:text-white transition-colors">Partenaires</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/role-des-parents" className="hover:text-white transition-colors">R&ocirc;le des parents</Link></li>
+              <li><Link href="/role-des-parents" className="hover:text-white transition-colors">Rôle des parents</Link></li>
             </ul>
           </div>
           
@@ -79,7 +79,7 @@ export default function Footer() {
             <a href="#cookies" className="hover:text-white transition-colors">Cookies</a>
           </div>
           <div className="text-sm text-gray-400">
-            &copy; 2024 Montpellier Football Racing. Tous droits r&eacute;serv&eacute;s.
+            © 2024 Montpellier Football Racing. Tous droits réservés.
           </div>
         </div>
       </div>

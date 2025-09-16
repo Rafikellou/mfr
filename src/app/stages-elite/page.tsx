@@ -217,7 +217,8 @@ export default function StagesElitePage() {
                           {/* Age Category and Pricing */}
                           <div className="grid grid-cols-2 gap-4">
                             <div className="bg-gray-50 p-3 rounded-lg">
-                              <div className="text-sm text-gray-600 mb-1">Catégorie d&apos;âge</div>
+                              <div className="text-sm text-gray-600 mb-1">Catégorie d'âge</div>
+
                               <div className="font-semibold text-gray-800">{stage.categoryLabel}</div>
                               <div className="text-xs text-gray-500">{stage.ageRange}</div>
                             </div>
@@ -228,7 +229,7 @@ export default function StagesElitePage() {
                             </div>
                           </div>
 
-                          {/* Advance Payment */}
+                          {/* Avance */}
                           <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
                             <div className="flex items-center gap-2 text-yellow-800">
                               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,63 +239,27 @@ export default function StagesElitePage() {
                             </div>
                           </div>
 
-                          {/* Places Available */}
-                          <div>
-                            <div className="flex justify-between items-center mb-2">
-                              <span className="font-medium text-gray-800">Places disponibles</span>
-                              {getPlacesText(stage)}
-                            </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2">
-                              <div 
-                                className={`h-2 rounded-full ${
-                                  stage.placesLeft <= 5 ? 'bg-orange-500' : 'bg-green-500'
-                                }`}
-                                style={{ width: `${(stage.placesLeft / stage.placesTotal) * 100}%` }}
-                              ></div>
-                            </div>
-                            <div className="text-sm text-gray-600 mt-1">
-                              {stage.placesLeft} / {stage.placesTotal} places
-                            </div>
+                          {/* Boutons */}
+                          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
+                            <button 
+                              className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
+                                stage.status === 'full'
+                                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                                  : 'bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105'
+                              }`}
+                              disabled={stage.status === 'full'}
+                            >
+                              {stage.status === 'full' ? 'Complet' : "S'inscrire maintenant"}
+                            </button>
+                            <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
+                              Plus d'infos
+                            </a>
                           </div>
-
-                          {/* Registered Players */}
-                          <div>
-                            <div className="font-medium text-gray-800 mb-3">
-                              Joueurs déjà inscrits ({stage.registeredPlayers.length})
-                            </div>
-                            <div className="grid grid-cols-2 gap-1 text-sm">
-                              {stage.registeredPlayers.map((player, index) => (
-                                <div key={index} className="text-gray-600">
-                                  {player.firstName} {player.lastName}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="px-8 pb-8 mt-8">
-                        <div className="bg-gray-50 p-6 rounded-xl">
-                          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
-                              <button 
-                                className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
-                                  stage.status === 'full' 
-                                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                                    : 'bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105'
-                                }`}
-                                disabled={stage.status === 'full'}
-                              >
-                                {stage.status === 'full' ? 'Complet' : "S&apos;inscrire maintenant"}
-                              </button>
-                              <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
-                                Plus d&apos;infos
-                              </a>
-                            </div>
-                            <div className="text-center lg:text-right">
-                              <div className="text-3xl font-bold text-primary mb-2">{stage.price}</div>
-                              <div className="text-lg text-gray-600">Avance: <span className="font-semibold text-green-600">{stage.advancePayment}</span></div>
-                            </div>
+                          
+                          {/* Prix affiché (rappel) */}
+                          <div className="text-center lg:text-right">
+                            <div className="text-3xl font-bold text-primary mb-2">{stage.price}</div>
+                            <div className="text-lg text-gray-600">Avance: <span className="font-semibold text-green-600">{stage.advancePayment}</span></div>
                           </div>
                         </div>
                       </div>
