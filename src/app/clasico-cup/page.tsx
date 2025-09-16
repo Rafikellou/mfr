@@ -17,10 +17,10 @@ export default function ClasicoCupPage() {
           
           <div className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
             <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe27LG0VwQoGsVpKbUje9k1W5tS8hQD1JZf4r1J2p5J2p5J2p5J2p5J2p5/viewform?embedded=true" 
-              width="100%" 
-              height="1500" 
-              frameBorder="0" 
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdQIV6V6mmf7eUSpesnsa6K8ysHg6bCZAMvhGa-G94rnP075Q/viewform?embedded=true" 
+              width="640" 
+              height="1453" 
+              frameBorder={0} 
               marginHeight={0} 
               marginWidth={0}
               title="Formulaire d'inscription Clasico Cup"

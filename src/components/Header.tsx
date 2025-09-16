@@ -27,10 +27,22 @@ export default function Header() {
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex items-center space-x-8">
-              <li><Link href="/" className="text-gray-700 hover:text-primary transition-colors text-sm">Accueil</Link></li>
-              <li><Link href="/tournois" className="text-primary font-semibold hover:text-primary/80 transition-colors text-base">Tournois</Link></li>
-              <li><Link href="/stages-elite" className="text-primary font-semibold hover:text-primary/80 transition-colors text-base">Stages Elite</Link></li>
-              <li><Link href="/detections" className="text-primary font-semibold hover:text-primary/80 transition-colors text-base">Détections</Link></li>
+              <li className="relative group">
+                <button className="text-primary font-semibold hover:text-primary/80 transition-colors text-base flex items-center gap-1">
+                  Nos 4 formats
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                  <div className="py-2">
+                    <Link href="/tournois" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Tournoi</Link>
+                    <Link href="/detections" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Détection</Link>
+                    <Link href="/stages-elite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Stage</Link>
+                    <Link href="/coaching-elite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Coaching d'Elite</Link>
+                  </div>
+                </div>
+              </li>
               <li><Link href="/role-des-parents" className="text-gray-700 hover:text-primary transition-colors text-sm">Rôle des parents</Link></li>
               <li><Link href="/partenaires" className="text-gray-700 hover:text-primary transition-colors text-sm">Partenaires</Link></li>
               <li><Link href="/contact" className="text-gray-700 hover:text-primary transition-colors text-sm">Contact</Link></li>
@@ -66,10 +78,11 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <ul className="space-y-4">
-              <li><Link href="/" className="block text-gray-700 hover:text-primary text-sm">Accueil</Link></li>
-              <li><Link href="/tournois" className="block text-primary font-semibold hover:text-primary/80 text-base">Tournois</Link></li>
-              <li><Link href="/stages-elite" className="block text-primary font-semibold hover:text-primary/80 text-base">Stages Elite</Link></li>
-              <li><Link href="/detections" className="block text-primary font-semibold hover:text-primary/80 text-base">Détections</Link></li>
+              <li className="text-primary font-semibold text-base">Nos 4 formats</li>
+              <li><Link href="/tournois" className="block pl-3 text-gray-700 hover:text-primary text-sm">Tournoi</Link></li>
+              <li><Link href="/detections" className="block pl-3 text-gray-700 hover:text-primary text-sm">Détection</Link></li>
+              <li><Link href="/stages-elite" className="block pl-3 text-gray-700 hover:text-primary text-sm">Stage</Link></li>
+              <li><Link href="/coaching-elite" className="block pl-3 text-gray-700 hover:text-primary text-sm">Coaching d'Elite</Link></li>
               <li><Link href="/role-des-parents" className="block text-gray-700 hover:text-primary text-sm">Rôle des parents</Link></li>
               <li><Link href="/partenaires" className="block text-gray-700 hover:text-primary text-sm">Partenaires</Link></li>
               <li><Link href="/contact" className="block text-gray-700 hover:text-primary text-sm">Contact</Link></li>

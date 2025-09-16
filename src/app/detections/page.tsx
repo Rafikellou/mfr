@@ -30,6 +30,7 @@ type Detection = {
   description: string
   format: string
   registeredPlayers: RegisteredPlayer[]
+  ctaUrl?: string
 }
 
 const detectionsData: Detection[] = [
@@ -76,10 +77,44 @@ const detectionsData: Detection[] = [
       { firstName: "Nicolas", lastName: "S." },
     ],
   },
+  {
+    id: 2,
+    type: "detection",
+    title: "Détection USA Football & Études",
+    date: "2025-11-11",
+    dateFormatted: "Mardi 11 Novembre 2025",
+    time: "Heure communiquée ultérieurement",
+    city: "Mireval",
+    venue: "Ville de Mireval",
+    venueAddress: "(Hérault) – Adresse exacte communiquée ultérieurement",
+    googleMapsLink: "#",
+    category: "u18-u23",
+    categoryLabel: "U18 à U23",
+    ageRange: "18-23 ans",
+    placesTotal: 25,
+    placesLeft: 25,
+    price: "50€",
+    priceType: "par joueur",
+    advancePayment: "50€",
+    image: "/detection-usa.jpg",
+    status: "open",
+    club: "NextChampUSA",
+    description:
+      "Vis ton rêve américain: football & études aux USA. Infrastructures pro, ambiance unique et diplôme reconnu à l’international.",
+    format:
+      "Ouvert U18–U23 (min R1/R2/centre). Exigences: Bac, test d’anglais (Duolingo/TOEFL), dossier académique et sportif. Bourses 70–100% via NextChampUSA.",
+    registeredPlayers: [],
+    ctaUrl:
+      "https://www.payasso.fr/montpellier-football-racing/detection-usa-nov-2025",
+  },
 ]
 
 export default function DetectionsPage() {
   const filteredDetections = detectionsData
+  // Met la détection USA en premier
+  const sortedDetections = [...filteredDetections].sort((a, b) =>
+    a.id === 2 ? -1 : b.id === 2 ? 1 : 0
+  )
 
   const getStatusBadge = (d: Detection) => {
     if (d.status === "full") {
@@ -158,9 +193,9 @@ export default function DetectionsPage() {
       {/* Detections Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {filteredDetections.length > 0 ? (
+          {sortedDetections.length > 0 ? (
             <div className="space-y-12 max-w-7xl mx-auto">
-              {filteredDetections.map((detection, index) => (
+              {sortedDetections.map((detection, index) => (
                 <div key={detection.id}>
                   {index > 0 && (
                     <div className="flex items-center justify-center mb-12">
@@ -445,24 +480,35 @@ export default function DetectionsPage() {
                     >
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
-                          <button
-                            className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
-                              detection.status === "full" ||
-                              detection.status === "closed"
-                                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                                : "bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105"
-                            }`}
-                            disabled={
-                              detection.status === "full" ||
-                              detection.status === "closed"
-                            }
-                          >
-                            {detection.status === "full"
-                              ? "Complet"
-                              : detection.status === "closed"
-                              ? "Détection finalisée"
-                              : "S'inscrire maintenant"}
-                          </button>
+                          {detection.ctaUrl ? (
+                            <a
+                              href={detection.ctaUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105 text-center"
+                            >
+                              S'inscrire maintenant
+                            </a>
+                          ) : (
+                            <button
+                              className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
+                                detection.status === "full" ||
+                                detection.status === "closed"
+                                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                  : "bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105"
+                              }`}
+                              disabled={
+                                detection.status === "full" ||
+                                detection.status === "closed"
+                              }
+                            >
+                              {detection.status === "full"
+                                ? "Complet"
+                                : detection.status === "closed"
+                                ? "Détection finalisée"
+                                : "S'inscrire maintenant"}
+                            </button>
+                          )}
                           <a
                             href="/contact"
                             className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200"

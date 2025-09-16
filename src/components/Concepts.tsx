@@ -24,27 +24,6 @@ export default function Concepts() {
       image: "/tournois-image.jpg"
     },
     {
-      title: "Stages",
-      subtitle: "Développe ton potentiel",
-      description: "Perfectionne ton jeu selon ton poste avec des pros. Que tu sois gardien, défenseur, milieu ou attaquant, découvre les secrets des meilleurs !",
-      benefits: [
-        "Entraînement spécialisé pour ton poste",
-        "Techniques de pro qu'on ne t'apprend nulle part",
-        "Progression adaptée à tes points forts",
-        "Coaching perso avec des experts"
-      ],
-      color: "primary",
-      gradient: "from-primary to-purple-600",
-      bgColor: "bg-purple-50",
-      link: "/stages-elite",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
-      image: "/stages-image.jpg"
-    },
-    {
       title: "Détection",
       subtitle: "Ta chance de briller",
       description: "Montre ce que tu sais faire devant des recruteurs de clubs pros. C'est ton moment pour impressionner et peut-être décrocher ta place dans un grand club !",
@@ -85,6 +64,27 @@ export default function Concepts() {
         </svg>
       ),
       image: "/coaching-image.jpg"
+    },
+    {
+      title: "Stages",
+      subtitle: "Développe ton potentiel",
+      description: "Perfectionne ton jeu selon ton poste avec des pros. Que tu sois gardien, défenseur, milieu ou attaquant, découvre les secrets des meilleurs !",
+      benefits: [
+        "Entraînement spécialisé pour ton poste",
+        "Techniques de pro qu'on ne t'apprend nulle part",
+        "Progression adaptée à tes points forts",
+        "Coaching perso avec des experts"
+      ],
+      color: "primary",
+      gradient: "from-primary to-purple-600",
+      bgColor: "bg-purple-50",
+      link: "/stages-elite",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
+      image: "/stages-image.jpg"
     }
   ]
 

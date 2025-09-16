@@ -43,10 +43,10 @@ export default function Contact() {
                 </div>
                 
                 <a 
-                  href="mailto:s.amine@mf-racing.fr" 
+                  href="mailto:mfracing34@gmail.com" 
                   className="text-xl font-bold text-gray-800 hover:text-primary transition-colors underline"
                 >
-                  s.amine@mf-racing.fr
+                  mfracing34@gmail.com
                 </a>
               </div>
               

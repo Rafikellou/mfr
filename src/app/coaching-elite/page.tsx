@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -10,18 +11,32 @@ export default function CoachingElite() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-br from-purple-900 to-indigo-800 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Coaching d'élite
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-purple-100">
-                Un accompagnement personnalisé pour atteindre l'excellence
-              </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary to-purple-300 mx-auto mb-8"></div>
-            </div>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/coaching-elite.jpg"
+              alt="Coaching d'élite"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60" />
+
+          {/* Content */}
+          <div className="relative container mx-auto px-4 text-center text-white z-10">
+            <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 leading-tight">
+              Coaching d'élite
+            </h1>
+            <p className="text-2xl md:text-3xl font-semibold mb-6">
+              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">Meilleur</span>, chaque jour
+            </p>
+            <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-3xl mx-auto">
+              Un accompagnement personnalisé pour atteindre l'excellence, progresser plus vite et élever ton jeu à chaque séance.
+            </p>
           </div>
         </section>
 
@@ -67,10 +82,14 @@ export default function CoachingElite() {
                     </div>
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center text-gray-500">
-                    Image de coaching d'élite
-                  </div>
+                <div className="relative w-full h-72 md:h-96 rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/coaching-elite.jpg"
+                    alt="Coaching d'élite - MFR"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>
