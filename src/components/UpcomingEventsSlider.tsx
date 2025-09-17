@@ -25,37 +25,35 @@ export default function UpcomingEventsSlider() {
     {
       title: "Clasico Cup",
       subtitle: "Hérault vs. Gard",
-      date: "18 Avril 2026 — Bellegarde",
-      location: "",
+      date: "18 Avril 2026",
+      location: "Bellegarde",
       image: "/clasico-cup.png",
       description: "Match d'exception pour écrire l'histoire locale. Rejoins-nous pour une expérience unique.",
       ctaLabel: "Se pré-inscrire",
-      href: "/clasico-cup",
+      href: "/tournois",
       sortDate: "2026-04-18",
     },
     {
       title: "Stage Perfectionnement",
       subtitle: "Tous les postes",
-      date: "27 → 31 Octobre 2025 — Montpellier",
-      location: "",
+      date: "27 → 31 Octobre 2025",
+      location: "Montpellier",
       image: "/stage-photo.jpg",
       description: "Développe tes compétences techniques et tactiques avec nos coachs experts.",
       ctaLabel: "S'inscrire au stage",
-      href: "https://www.payasso.fr/monptellier-football-racing/stage-perfectionnement-toussaint-2025",
-      external: true,
+      href: "/stages-elite",
       sortDate: "2025-10-27",
     },
     {
       title: "Détection USA Football & Études",
       subtitle: "NextChampUSA",
-      date: "11 Novembre 2025 — Mireval (Hérault)",
-      location: "",
+      date: "11 Novembre 2025",
+      location: "Mireval (Hérault)",
       image: "/detection-usa.jpg",
       description:
         "Vis ton rêve américain: football de haut niveau + études. Bourses possibles et infrastructures pros.",
       ctaLabel: "S'inscrire",
-      href: "https://www.payasso.fr/montpellier-football-racing/detection-usa-nov-2025",
-      external: true,
+      href: "/detections",
       sortDate: "2025-11-11",
     },
   ]
@@ -168,12 +166,21 @@ export default function UpcomingEventsSlider() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
                   {/* Date badge */}
                   <div className="absolute top-4 left-4 z-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white shadow">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary to-purple-600 text-white shadow-lg">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                       <span className="text-sm md:text-base font-semibold tracking-wide">{ev.date}</span>
                     </div>
+                    {ev.location && (
+                      <div className="mt-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/45 backdrop-blur-sm border border-white/20 text-white shadow">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <span className="text-sm font-medium">{ev.location}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="text-sm text-white/80 mb-1">{ev.subtitle}</div>
