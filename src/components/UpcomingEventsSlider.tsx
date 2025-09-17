@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type EventCard = {
   title: string
@@ -14,10 +14,12 @@ type EventCard = {
   ctaLabel: string
   href: string
   external?: boolean
+  sortDate: string // YYYY-MM-DD for ordering
 }
 
 export default function UpcomingEventsSlider() {
   const sliderRef = useRef<HTMLDivElement>(null)
+  const [autoPlay, setAutoPlay] = useState(true)
 
   const events: EventCard[] = [
     {
@@ -29,6 +31,7 @@ export default function UpcomingEventsSlider() {
       description: "Match d'exception pour écrire l'histoire locale. Rejoins-nous pour une expérience unique.",
       ctaLabel: "Se pré-inscrire",
       href: "/clasico-cup",
+      sortDate: "2026-04-18",
     },
     {
       title: "Stage Perfectionnement",
@@ -40,6 +43,7 @@ export default function UpcomingEventsSlider() {
       ctaLabel: "S'inscrire au stage",
       href: "https://www.payasso.fr/monptellier-football-racing/stage-perfectionnement-toussaint-2025",
       external: true,
+      sortDate: "2025-10-27",
     },
     {
       title: "Détection USA Football & Études",
@@ -52,14 +56,61 @@ export default function UpcomingEventsSlider() {
       ctaLabel: "S'inscrire",
       href: "https://www.payasso.fr/montpellier-football-racing/detection-usa-nov-2025",
       external: true,
+      sortDate: "2025-11-11",
     },
   ]
+
+  // Order events from nearest to farthest
+  const eventsSorted = [...events].sort(
+    (a, b) => new Date(a.sortDate).getTime() - new Date(b.sortDate).getTime(),
+  )
 
   const scrollByAmount = (amount: number) => {
     const el = sliderRef.current
     if (!el) return
     el.scrollBy({ left: amount, behavior: "smooth" })
   }
+
+  // Auto-slide every 3s until user interacts
+  useEffect(() => {
+    if (!autoPlay) return
+    const el = sliderRef.current
+    if (!el) return
+
+    const getStep = () => {
+      const card = el.querySelector<HTMLDivElement>(".event-card")
+      if (!card) return 400
+      const gap = 24 // gap-6
+      return card.offsetWidth + gap
+    }
+
+    const interval = setInterval(() => {
+      const step = getStep()
+      const maxScroll = el.scrollWidth - el.clientWidth
+      const nextLeft = Math.min(el.scrollLeft + step, maxScroll)
+      // if at end, go back to start for a loop effect
+      if (el.scrollLeft >= maxScroll - 10) {
+        el.scrollTo({ left: 0, behavior: "smooth" })
+      } else {
+        el.scrollTo({ left: nextLeft, behavior: "smooth" })
+      }
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [autoPlay])
+
+  // Stop autoplay on user interaction (pointer down or scroll by arrows/links)
+  useEffect(() => {
+    const el = sliderRef.current
+    if (!el) return
+    const stop = () => setAutoPlay(false)
+    el.addEventListener("pointerdown", stop, { passive: true })
+    el.addEventListener("touchstart", stop, { passive: true })
+    return () => {
+      el.removeEventListener("pointerdown", stop)
+      el.removeEventListener("touchstart", stop)
+    }
+  }, [])
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -69,7 +120,10 @@ export default function UpcomingEventsSlider() {
           <div className="hidden md:flex gap-2">
             <button
               aria-label="Précédent"
-              onClick={() => scrollByAmount(-400)}
+              onClick={() => {
+                setAutoPlay(false)
+                scrollByAmount(-400)
+              }}
               className="p-2 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +132,10 @@ export default function UpcomingEventsSlider() {
             </button>
             <button
               aria-label="Suivant"
-              onClick={() => scrollByAmount(400)}
+              onClick={() => {
+                setAutoPlay(false)
+                scrollByAmount(400)
+              }}
               className="p-2 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,21 +155,30 @@ export default function UpcomingEventsSlider() {
 
           <div
             ref={sliderRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2"
+            className="no-scrollbar flex gap-6 overflow-x-auto snap-x snap-mandatory pb-2"
+            onClick={() => setAutoPlay(false)}
           >
-            {events.map((ev, idx) => (
+            {eventsSorted.map((ev, idx) => (
               <div
                 key={idx}
-                className="snap-start shrink-0 w-[88%] md:w-[68%] lg:w-[48%]"
+                className="event-card snap-start shrink-0 w-[88%] md:w-[68%] lg:w-[48%]"
               >
-                <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+                <div className="relative h-96 md:h-[28rem] rounded-2xl overflow-hidden shadow-lg">
                   <Image src={ev.image} alt={ev.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
+                  {/* Date badge */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white shadow">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <span className="text-sm md:text-base font-semibold tracking-wide">{ev.date}</span>
+                    </div>
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <div className="text-sm text-white/80 mb-1">{ev.subtitle}</div>
-                    <h3 className="text-2xl font-bold mb-1">{ev.title}</h3>
-                    <div className="text-sm text-white/80 mb-3">{ev.date}</div>
-                    <p className="text-white/90 text-sm mb-4 line-clamp-2">{ev.description}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{ev.title}</h3>
+                    <p className="text-white/90 text-sm md:text-base mb-4 line-clamp-2">{ev.description}</p>
                     {ev.external ? (
                       <a
                         href={ev.href}
@@ -139,6 +205,11 @@ export default function UpcomingEventsSlider() {
           </div>
         </div>
       </div>
+      {/* Hide horizontal scrollbar */}
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </section>
   )
 }
