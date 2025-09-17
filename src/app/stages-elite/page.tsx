@@ -241,16 +241,23 @@ export default function StagesElitePage() {
 
                           {/* Boutons */}
                           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
-                            <button 
-                              className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
-                                stage.status === 'full'
-                                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                                  : 'bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105'
-                              }`}
-                              disabled={stage.status === 'full'}
-                            >
-                              {stage.status === 'full' ? 'Complet' : "S'inscrire maintenant"}
-                            </button>
+                            {stage.status === 'full' ? (
+                              <button 
+                                className="w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg bg-gray-300 text-gray-500 cursor-not-allowed"
+                                disabled
+                              >
+                                Complet
+                              </button>
+                            ) : (
+                              <a 
+                                href="https://www.payasso.fr/monptellier-football-racing/stage-perfectionnement-toussaint-2025"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto text-center px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105"
+                              >
+                                S'inscrire maintenant
+                              </a>
+                            )}
                             <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
                               Plus d'infos
                             </a>

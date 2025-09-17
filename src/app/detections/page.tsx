@@ -100,7 +100,7 @@ const detectionsData: Detection[] = [
     status: "open",
     club: "NextChampUSA",
     description:
-      "Vis ton rêve américain: football & études aux USA. Infrastructures pro, ambiance unique et diplôme reconnu à l’international.",
+      "Obtiens une bourse pour intégrer une université américaine, poursuis tes études dans un cadre reconnu à l’international et joue au football dans des stades remplis, au cœur d’infrastructures dignes du monde professionnel. Détection ouverte uniquement aux joueurs en terminale ou dans les trois premières années post-bac.",
     format:
       "Ouvert U18–U23 (min R1/R2/centre). Exigences: Bac, test d’anglais (Duolingo/TOEFL), dossier académique et sportif. Bourses 70–100% via NextChampUSA.",
     registeredPlayers: [],

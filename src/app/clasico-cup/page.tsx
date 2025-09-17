@@ -16,17 +16,21 @@ export default function ClasicoCupPage() {
           </div>
           
           <div className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdQIV6V6mmf7eUSpesnsa6K8ysHg6bCZAMvhGa-G94rnP075Q/viewform?embedded=true" 
-              width="640" 
-              height="1453" 
-              frameBorder={0} 
-              marginHeight={0} 
-              marginWidth={0}
-              title="Formulaire d'inscription Clasico Cup"
-            >
-              Chargement…
-            </iframe>
+            <div className="w-full flex justify-center px-2 md:px-6 py-4">
+              <div className="w-full max-w-[980px]">
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdQIV6V6mmf7eUSpesnsa6K8ysHg6bCZAMvhGa-G94rnP075Q/viewform?embedded=true" 
+                  width="100%" 
+                  height="1500" 
+                  frameBorder={0} 
+                  marginHeight={0} 
+                  marginWidth={0}
+                  title="Formulaire d'inscription Clasico Cup"
+                >
+                  Chargement…
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
