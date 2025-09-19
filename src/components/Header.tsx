@@ -36,10 +36,32 @@ export default function Header() {
                 </button>
                 <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                   <div className="py-2">
-                    <Link href="/tournois" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Tournoi</Link>
-                    <Link href="/detections" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Détection</Link>
-                    <Link href="/stages-elite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Stage</Link>
-                    <Link href="/coaching-elite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Coaching d'Elite</Link>
+                    <Link href="/tournois" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 21h8M12 17a5 5 0 005-5V5H7v7a5 5 0 005 5zm7-12h3v2a4 4 0 01-4 4M7 5H4v2a4 4 0 004 4" />
+                      </svg>
+                      <span>Tournoi</span>
+                    </Link>
+                    <Link href="/detections" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3h6l3 3v12a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12l4 4m0 0l-2 2-4-4m6 2l-1-1" />
+                      </svg>
+                      <span>Détection</span>
+                    </Link>
+                    <Link href="/stages-elite" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5l5 12H7L12 5z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 14h6M10 11h4" />
+                      </svg>
+                      <span>Stage</span>
+                    </Link>
+                    <Link href="/coaching-elite" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 10v4M6 10v4M8 12h8M18 10v4M20 10v4" />
+                      </svg>
+                      <span>Coaching d'Elite</span>
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -79,10 +101,40 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200">
             <ul className="space-y-4">
               <li className="text-primary font-semibold text-base">Nos 4 formats</li>
-              <li><Link href="/tournois" className="block pl-3 text-gray-700 hover:text-primary text-sm">Tournoi</Link></li>
-              <li><Link href="/detections" className="block pl-3 text-gray-700 hover:text-primary text-sm">Détection</Link></li>
-              <li><Link href="/stages-elite" className="block pl-3 text-gray-700 hover:text-primary text-sm">Stage</Link></li>
-              <li><Link href="/coaching-elite" className="block pl-3 text-gray-700 hover:text-primary text-sm">Coaching d'Elite</Link></li>
+              <li>
+                <Link href="/tournois" className="flex items-center gap-2 pl-3 text-gray-700 hover:text-primary text-sm">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 21h8M12 17a5 5 0 005-5V5H7v7a5 5 0 005 5zm7-12h3v2a4 4 0 01-4 4M7 5H4v2a4 4 0 004 4" />
+                  </svg>
+                  <span>Tournoi</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/detections" className="flex items-center gap-2 pl-3 text-gray-700 hover:text-primary text-sm">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3h6l3 3v12a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12l4 4m0 0l-2 2-4-4m6 2l-1-1" />
+                  </svg>
+                  <span>Détection</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/stages-elite" className="flex items-center gap-2 pl-3 text-gray-700 hover:text-primary text-sm">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5l5 12H7L12 5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 14h6M10 11h4" />
+                  </svg>
+                  <span>Stage</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/coaching-elite" className="flex items-center gap-2 pl-3 text-gray-700 hover:text-primary text-sm">
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 10v4M6 10v4M8 12h8M18 10v4M20 10v4" />
+                  </svg>
+                  <span>Coaching d'Elite</span>
+                </Link>
+              </li>
               <li><Link href="/role-des-parents" className="block text-gray-700 hover:text-primary text-sm">Rôle des parents</Link></li>
               <li><Link href="/partenaires" className="block text-gray-700 hover:text-primary text-sm">Partenaires</Link></li>
               <li><Link href="/contact" className="block text-gray-700 hover:text-primary text-sm">Contact</Link></li>

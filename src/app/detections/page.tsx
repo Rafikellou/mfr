@@ -177,7 +177,7 @@ export default function DetectionsPage() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative container mx-auto px-4 text-center text-white z-10">
           <h1 className="text-5xl md:text-7xl font-poppins font-bold mb-6 leading-tight">
-            Ta chance de{" "}
+            Ton opportunité de{" "}
             <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
               briller
             </span>

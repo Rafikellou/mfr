@@ -25,7 +25,7 @@ export default function Concepts() {
     },
     {
       title: "Détection",
-      subtitle: "Ta chance de briller",
+      subtitle: "Ton opportunité de briller",
       description: "Montre ce que tu sais faire devant des recruteurs de clubs pros. C'est ton moment pour impressionner et peut-être décrocher ta place dans un grand club !",
       benefits: [
         "Des recruteurs pros qui te regardent jouer",

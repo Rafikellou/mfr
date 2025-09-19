@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 const tournamentsData = [
   {
@@ -21,9 +22,8 @@ const tournamentsData = [
     ageRange: '10-11 ans',
     teamsTotal: 12,
     teamsLeft: 10,
-    price: '20€',
+    price: '10€',
     priceType: 'par enfant',
-    advancePayment: '20€',
     image: '/tournoi-photo.jpg',
     status: 'open',
     description: 'Affrontement épique entre les meilleures équipes de l\'Hérault et du Gard dans un tournoi compétitif. Prouve que ton équipe est la meilleure de la région.',
@@ -223,15 +223,6 @@ export default function TournoisPage() {
                             </div>
                           </div>
 
-                          {/* Advance Payment */}
-                          <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-                            <div className="flex items-center gap-2 text-yellow-800">
-                              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                              </svg>
-                              <span className="font-medium">Avance pour réserver: {tournament.advancePayment}</span>
-                            </div>
-                          </div>
 
                           {/* Teams Available */}
                           <div>
@@ -273,23 +264,28 @@ export default function TournoisPage() {
                         <div className="bg-gray-50 p-6 rounded-xl">
                           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
-                              <button 
-                                className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg ${
-                                  tournament.status === 'full' 
-                                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                                    : 'bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105'
-                                }`}
-                                disabled={tournament.status === 'full'}
-                              >
-                                {tournament.status === 'full' ? 'Complet' : "Inscrire l'équipe"}
-                              </button>
+                              {tournament.status === 'full' ? (
+                                <button 
+                                  className={`w-full sm:w-auto px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg bg-gray-300 text-gray-500 cursor-not-allowed`}
+                                  disabled
+                                >
+                                  Complet
+                                </button>
+                              ) : (
+                                <Link 
+                                  href="/clasico-cup" 
+                                  className="w-full sm:w-auto text-center px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg bg-gradient-to-r from-primary to-purple-600 text-white hover:shadow-xl transform hover:scale-105"
+                                >
+                                  {"Inscrire l'équipe"}
+                                </Link>
+                              )}
                               <a href="/contact" className="w-full sm:w-auto text-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-200">
                                 Plus d'infos
                               </a>
                             </div>
                             <div className="text-center lg:text-right">
                               <div className="text-3xl font-bold text-primary mb-2">{tournament.price}</div>
-                              <div className="text-lg text-gray-600">Avance: <span className="font-semibold text-green-600">{tournament.advancePayment}</span></div>
+                              <div className="text-lg text-gray-600">Prix total payable à l'avance</div>
                             </div>
                           </div>
                         </div>

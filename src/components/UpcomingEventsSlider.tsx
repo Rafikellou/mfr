@@ -30,7 +30,7 @@ export default function UpcomingEventsSlider() {
       image: "/clasico-cup.png",
       description: "Match d'exception pour écrire l'histoire locale. Rejoins-nous pour une expérience unique.",
       ctaLabel: "Se pré-inscrire",
-      href: "/tournois",
+      href: "/clasico-cup",
       sortDate: "2026-04-18",
     },
     {
