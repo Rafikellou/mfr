@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-
 const tournamentsData = [
   {
     id: 2,
@@ -13,10 +12,10 @@ const tournamentsData = [
     date: '2026-04-18',
     dateFormatted: 'Samedi 18 Avril 2026',
     time: '9h00 - 18h00',
-    city: 'Bellegarde',
-    venue: 'Stade Bellegarde',
-    venueAddress: 'Stade Bellegarde, 30127 Bellegarde',
-    googleMapsLink: 'https://share.google/tM90p3LguaG8aVINx',
+    city: 'Saint-Jean-du-Pin',
+    venue: 'Clasico Cup',
+    venueAddress: '276-298 Chemin de Madagascar, 30140 Saint-Jean-du-Pin',
+    googleMapsLink: 'https://maps.google.com/?q=276-298+Chemin+de+Madagascar+30140+Saint-Jean-du-Pin',
     category: 'u11',
     categoryLabel: 'U11',
     ageRange: '10-11 ans',
