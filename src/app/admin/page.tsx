@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form'
 import { useAuth } from '@/contexts/AuthContext'
 import { useContent, Section, ContentItem } from '@/contexts/ContentContext'
 import { supabase } from '@/lib/supabase'
-import { Eye, EyeOff, Save, LogOut, Settings } from 'lucide-react'
+import { Eye, EyeOff, Save, LogOut, Settings, UserPlus } from 'lucide-react'
+import Link from 'next/link'
 
 interface LoginForm {
   email: string
@@ -107,6 +108,16 @@ export default function CMSInterface() {
               Se connecter
             </button>
           </form>
+
+          <div className="mt-6 text-center">
+            <Link 
+              href="/admin/signup" 
+              className="flex items-center justify-center text-blue-600 hover:text-blue-700"
+            >
+              <UserPlus className="w-4 h-4 mr-2" />
+              Créer un compte
+            </Link>
+          </div>
         </div>
       </div>
     )

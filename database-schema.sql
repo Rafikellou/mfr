@@ -115,4 +115,5 @@ INSERT INTO content_items (section_id, field_name, field_value, field_type, orde
 
 -- Insérer un utilisateur admin par défaut (remplacez par votre email)
 INSERT INTO admin_users (email, role) VALUES
-('admin@yourdomain.com', 'admin');
+('mfracing34@gmail.com', 'admin'),
+('kellourafik@gmail.com', 'admin');
