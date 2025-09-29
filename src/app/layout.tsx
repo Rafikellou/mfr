@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ContentProvider } from '@/contexts/ContentContext'
+import { ExtendedContentProvider } from '@/contexts/ExtendedContentContext'
 
 export const metadata: Metadata = {
   title: 'MFR — Détections, tournois & stages de football jeunes (U13–U19)',
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body>
         <AuthProvider>
           <ContentProvider>
-            {children}
+            <ExtendedContentProvider>
+              {children}
+            </ExtendedContentProvider>
           </ContentProvider>
         </AuthProvider>
       </body>

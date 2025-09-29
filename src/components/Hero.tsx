@@ -3,10 +3,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useContent } from '@/contexts/ContentContext'
+import { useExtendedContent } from '@/contexts/ExtendedContentContext'
 
 export default function Hero() {
   const { getContentBySection, sections } = useContent()
-  const heroContent = getContentBySection('hero')
+  const { getContentByComponent } = useExtendedContent()
+  
+  // Essayer d'abord le nouveau système, puis l'ancien en fallback
+  const heroContent = getContentByComponent('hero') || getContentBySection('hero')
   const heroSection = sections.find(s => s.name === 'hero')
 
   // Si la section n'est pas visible, ne pas l'afficher

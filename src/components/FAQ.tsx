@@ -1,11 +1,17 @@
 'use client'
 
 import { useState } from 'react'
+import { useExtendedContent } from '@/contexts/ExtendedContentContext'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
-
-  const faqs = [
+  const { getContentByComponent } = useExtendedContent()
+  
+  // Récupérer le contenu du CMS
+  const faqContent = getContentByComponent('faq')
+  
+  // Fallback vers le contenu par défaut si le CMS n'est pas configuré
+  const defaultFaqs = [
     {
       question: "À qui s'adressent vos événements ?",
       answer: "Nos événements s'adressent aux joueurs évoluant en club, avec un niveau minimum départemental/régional selon les catégories."
@@ -27,6 +33,30 @@ export default function FAQ() {
       answer: "Les annulations sont possibles jusqu'à 15 jours avant l'événement, sous réserve d'approbation. Passé ce délai, le paiement est dû en totalité sauf en cas de blessure avec certificat médical. Les remboursements sont effectués sous 30 jours."
     }
   ]
+
+  // Construire les FAQs depuis le CMS ou utiliser les valeurs par défaut
+  const faqs = Object.keys(faqContent).length > 0 ? [
+    {
+      question: faqContent.question_1 || defaultFaqs[0].question,
+      answer: faqContent.answer_1 || defaultFaqs[0].answer
+    },
+    {
+      question: faqContent.question_2 || defaultFaqs[1].question,
+      answer: faqContent.answer_2 || defaultFaqs[1].answer
+    },
+    {
+      question: faqContent.question_3 || defaultFaqs[2].question,
+      answer: faqContent.answer_3 || defaultFaqs[2].answer
+    },
+    {
+      question: faqContent.question_4 || defaultFaqs[3].question,
+      answer: faqContent.answer_4 || defaultFaqs[3].answer
+    },
+    {
+      question: faqContent.question_5 || defaultFaqs[4].question,
+      answer: faqContent.answer_5 || defaultFaqs[4].answer
+    }
+  ] : defaultFaqs
 
   return (
     <section className="py-20 bg-white" id="faq">
