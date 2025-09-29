@@ -2,8 +2,18 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContent } from '@/contexts/ContentContext'
 
 export default function Hero() {
+  const { getContentBySection, sections } = useContent()
+  const heroContent = getContentBySection('hero')
+  const heroSection = sections.find(s => s.name === 'hero')
+
+  // Si la section n'est pas visible, ne pas l'afficher
+  if (!heroSection?.is_visible) {
+    return null
+  }
+
   return (
     <section className="relative min-h-[90vh] flex items-start justify-center overflow-hidden">
       {/* Background */}
@@ -23,7 +33,7 @@ export default function Hero() {
         {/* Top group: title only */}
         <div className="pt-24 md:pt-32 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-poppins font-semibold mb-4 text-white drop-shadow-2xl tracking-tight">
-            Révèle ton talent
+            {heroContent.title || heroSection?.title || 'Révèle ton talent'}
           </h1>
         </div>
 

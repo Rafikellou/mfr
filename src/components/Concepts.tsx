@@ -1,6 +1,18 @@
+'use client'
+
 import Link from 'next/link'
+import { useContent } from '@/contexts/ContentContext'
 
 export default function Concepts() {
+  const { getContentBySection, sections } = useContent()
+  const conceptsContent = getContentBySection('concepts')
+  const conceptsSection = sections.find(s => s.name === 'concepts')
+
+  // Si la section n'est pas visible, ne pas l'afficher
+  if (!conceptsSection?.is_visible) {
+    return null
+  }
+
   const concepts = [
     {
       title: "Tournois",
@@ -93,10 +105,10 @@ export default function Concepts() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-poppins font-semibold mb-4">
-            Quatre voies vers l'excellence
+            {conceptsContent.title || conceptsSection?.title || 'Quatre voies vers l\'excellence'}
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Découvre les opportunités qui t'attendent pour révéler ton potentiel
+            {conceptsContent.subtitle || conceptsSection?.subtitle || 'Découvre les opportunités qui t\'attendent pour révéler ton potentiel'}
           </p>
         </div>
 
