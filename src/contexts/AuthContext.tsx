@@ -56,22 +56,29 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       // Vérifier si Supabase est configuré
       if (!process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL.includes('placeholder')) {
+        console.log('Supabase not configured, skipping admin check')
         setIsAdmin(false)
         return
       }
 
+      console.log('Checking admin status for:', email)
       const { data, error } = await supabase
         .from('admin_users')
         .select('email')
         .eq('email', email)
         .single()
 
+      console.log('Admin check result:', { data, error })
+
       if (error || !data) {
+        console.log('User is not admin:', error?.message)
         setIsAdmin(false)
       } else {
+        console.log('User is admin:', data)
         setIsAdmin(true)
       }
     } catch (error) {
+      console.error('Error checking admin status:', error)
       setIsAdmin(false)
     }
   }
